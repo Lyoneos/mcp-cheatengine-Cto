@@ -1,13 +1,18 @@
-# MCP CheatEngine Toolkit
+# MCP CheatEngine Toolset
 
-MCP CheatEngine Toolkit is a Python-based toolset for communicating with CheatEngine through the MCP (Model Control Protocol) interface, providing memory reading/writing, assembly code analysis and other functions.
+MCP CheatEngine toolset is a Python-based toolkit for communicating with CheatEngine through the MCP interface, providing memory read and write, assembly code analysis, and other functions.
+
+Here, CE plugins and MCP interfaces have been developed.
+
+Python and CE use the socket protocol for communication. Currently, Python MCP only has built-in read and write modules, and Lua has also implemented writing and pointers, but stability is general.
+
+Those interested can give it a star.
 
 ## Features
 
-* **CheatEngine Connection Management**: Automatically connect to CheatEngine instances and maintain connection status
-* **Memory Operations**: Provide memory reading and writing functions
-* **Assembly Code Analysis**: Support getting and analyzing assembly code corresponding to memory addresses
-* **Plugin Architecture**: Support dynamic loading of tool modules for easy extension of functionality
+* Automatically connect to CheatEngine and analyze application memory and assembly
+* Provide AI interactive memory reading function
+* Support obtaining and analyzing assembly code corresponding to memory addresses
 
 ## Getting Started
 
@@ -17,7 +22,7 @@ MCP CheatEngine Toolkit is a Python-based toolset for communicating with CheatEn
 pip install -r requirements.txt
 ```
 
-### Run the Service
+### Run Service
 
 ```bash
 python main.py
@@ -25,9 +30,11 @@ python main.py
 
 ## Tool Usage Instructions
 
+#### Detailed documentation can be found in the API documentation
+
 ### 1. Connection Tool (ce_connect)
 
-Used to connect to CheatEngine and check connection status.
+Used to connect to CheatEngine and check the connection status.
 
 ```python
 ce_connect()
@@ -49,21 +56,15 @@ memory_read("0x7065F60", "int32", {
 
 ### 3. Test Tool (test_echo)
 
-A testing tool that receives any type of input and outputs it as is.
+A test tool that receives input of any type and outputs it unchanged.
 
 ```python
+# Example
 test_echo("Test string")
 test_echo({"name": "Test", "value": 100})
 ```
 
-## Development Guide
-
-### Adding New Tools
-
-1. Create a new tool directory in the `tools/` directory
-2. Create a `tool.py` file and implement the `register_tool` function
-3. Register the tool function using the MCP instance in the `register_tool` function
-
 ## Documentation
 
-For Chinese documentation, please see Readme_zh.md
+For Chinese documentation, please see [docs/README_zh.md](docs/README_zh.md).
+For API reference, please see [docs/Api_zh.md](docs/Api_zh.md).
