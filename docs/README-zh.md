@@ -10,6 +10,7 @@ Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，�
 
 感兴趣的可以点个星
 
+* 项目还在初期，有问题issues
 
 # CE 插件链接
 
