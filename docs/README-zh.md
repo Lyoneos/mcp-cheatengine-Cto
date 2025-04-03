@@ -75,3 +75,10 @@ memory_read("0x7065F60", "int32", {
 test_echo("测试字符串")
 test_echo({"name": "测试", "value": 100})
 ```
+
+
+### 联系方式
+
+*    ✉️ [ieeLyon@163.com](mailto:ieeLyon@163.com)
+*    注明来意
+*    本人还有 Ai 渗透方案，感兴趣联系我的邮箱
