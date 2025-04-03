@@ -30,7 +30,6 @@ python main.py
 Used to connect to CheatEngine and check connection status.
 
 ```python
-# Example: Connect to CheatEngine
 ce_connect()
 ```
 
@@ -39,10 +38,8 @@ ce_connect()
 Read data from a specified memory address.
 
 ```python
-# Example: Read memory address
 memory_read("0x7065F60", "int32")
 
-# Reading with options
 memory_read("0x7065F60", "int32", {
     "assembly": True,
     "assemblySize": 10,
@@ -55,7 +52,6 @@ memory_read("0x7065F60", "int32", {
 A testing tool that receives any type of input and outputs it as is.
 
 ```python
-# Example
 test_echo("Test string")
 test_echo({"name": "Test", "value": 100})
 ```
