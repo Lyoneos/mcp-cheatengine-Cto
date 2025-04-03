@@ -1,16 +1,15 @@
-# MCP CheatEngine工具集文档
+# MCP CheatEngine Toolkit Documentation
 
-欢迎使用MCP CheatEngine工具集文档！本文档将帮助您了解如何使用该工具集与CheatEngine进行交互。
+Welcome to the MCP CheatEngine Toolkit documentation! This documentation will help you understand how to use this toolkit to interact with CheatEngine.
 
-## 文档索引
+## Documentation Index
 
-- [使用指南](usage.md)：详细介绍工具集的基本用法和高级选项
-- [API参考](api.md)：完整的API文档，包括函数接口、参数说明和返回值格式
-- [开发指南](development.md)：如何为工具集添加新功能或扩展现有功能
+- [Chinese Documentation](README_zh.md): Detailed documentation in Chinese
+- [API Reference (Chinese)](Api_zh.md): Complete API documentation in Chinese
 
-## 快速入门
+## Quick Start
 
-### 安装
+### Installation
 
 ```bash
 git clone https://github.com/Lyoneos/mcp-cheatengine-Cto.git
@@ -18,30 +17,29 @@ cd mcp-cheatengine-Cto
 pip install -r requirements.txt
 ```
 
-### 运行
+### Running
 
 ```bash
 python main.py
 ```
 
-### 基本用法
+### Basic Usage
 
-1. 连接到CheatEngine：`ce_connect()`
-2. 读取内存：`memory_read("0x7065F60", "int32")`
-3. 带选项读取内存：`memory_read("0x7065F60", "int32", {"assembly": True})`
+1. Connect to CheatEngine: `ce_connect()`
+2. Read memory: `memory_read("0x7065F60", "int32")`
+3. Read memory with options: `memory_read("0x7065F60", "int32", {"assembly": True})`
 
-## 系统要求
+## System Requirements
 
 - Python 3.6+
 - CheatEngine 7.0+
-- 依赖项：参见requirements.txt
+- Dependencies: See requirements.txt
 
-## 更多资源
+## More Resources
 
-- [项目主页](https://github.com/Lyoneos/mcp-cheatengine-Cto)
-- [问题反馈](https://github.com/Lyoneos/mcp-cheatengine-Cto/issues)
-- [贡献指南](CONTRIBUTING.md)
+- [Project Home](https://github.com/Lyoneos/mcp-cheatengine-Cto)
+- [Issue Reporting](https://github.com/Lyoneos/mcp-cheatengine-Cto/issues)
 
-## 许可证
+## License
 
-本项目基于MIT许可证开源。
+This project is open source under the MIT license.
