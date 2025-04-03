@@ -1,11 +1,21 @@
 # MCP CheatEngine工具集
 
-MCP CheatEngine工具集是一个基于Python的工具包，用于通过MCP接口与CheatEngine进行通信，提供内存读写、汇编代码分析等功能。
+[![English](https://img.shields.io/badge/English-Click-yellow)](docs/README.md)
+[![简体中文](https://img.shields.io/badge/中文文档-点击查看-orange)](docs/README-zh.md)
 
 
-Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，写的模块，lua里也实现了了写和指针，不过稳定性一般。
+MCP CheatEngine `非官方`是一个基于Python的工具包，通过MCP接口与CheatEngine进行通信，提供读取内存、汇编代码分析等功能。
+
+Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，写模块未在MCP客户端实现。lua里也实现了写和指针扫描，不稳定。
 
 感兴趣的可以点个星
+
+
+# CE 插件链接
+
+* 必下
+* [CE插件下载](https://github.com/Lyoneos/mcp-cheatengine-Cto_CEPlugins)
+* 详细的Lua文档可看docx下的API_zh.md
 
 ## 特性
 
@@ -14,6 +24,8 @@ Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，�
 * 支持获取并分析内存地址对应的汇编代码
 
 ## 开始使用
+
+* 推荐使用 cursor 配合本项目完成使用
 
 ### 安装依赖
 
