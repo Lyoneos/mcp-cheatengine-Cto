@@ -1,1 +1,3 @@
-# ce_connect tool package initialization file
+"""
+ce连接工具
+"""
