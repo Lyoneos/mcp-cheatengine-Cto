@@ -1,13 +1,16 @@
 # MCP CheatEngine工具集
 
-MCP CheatEngine工具集是一个基于Python的工具包，用于通过MCP（模型控制协议）接口与CheatEngine进行通信，提供内存读写、汇编代码分析等功能。
+MCP CheatEngine工具集是一个基于Python的工具包，用于通过MCP接口与CheatEngine进行通信，提供内存读写、汇编代码分析等功能。
+
+Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，写的模块，lua里也实现了了写和指针，不过稳定性一般。
+
+* 感兴趣的可以点个星
 
 ## 特性
 
-* **CheatEngine连接管理**：自动连接到CheatEngine实例并维护连接状态
-* **内存操作**：提供内存读写功能
-* **汇编代码分析**：支持获取并分析内存地址对应的汇编代码
-* **插件架构**：支持动态加载工具模块，便于扩展功能
+* 自动连接到CheatEngine并分析应用内存和汇编
+* 提供Ai交互读内存功能
+* 支持获取并分析内存地址对应的汇编代码
 
 ## 开始使用
 
@@ -25,12 +28,13 @@ python main.py
 
 ## 工具使用说明
 
+#### 详细可看Api文档
+
 ### 1. 连接工具 (ce_connect)
 
 用于连接到CheatEngine并检查连接状态。
 
 ```python
-# 示例：连接到CheatEngine
 ce_connect()
 ```
 
@@ -39,10 +43,8 @@ ce_connect()
 从指定内存地址读取数据。
 
 ```python
-# 示例：读取内存地址
 memory_read("0x7065F60", "int32")
 
-# 带选项的读取
 memory_read("0x7065F60", "int32", {
     "assembly": True,
     "assemblySize": 10,
@@ -59,11 +61,3 @@ memory_read("0x7065F60", "int32", {
 test_echo("测试字符串")
 test_echo({"name": "测试", "value": 100})
 ```
-
-## 开发指南
-
-### 添加新工具
-
-1. 在`tools/`目录下创建新的工具目录
-2. 创建`tool.py`文件并实现`register_tool`函数
-3. 在`register_tool`函数中使用MCP实例注册工具函数
