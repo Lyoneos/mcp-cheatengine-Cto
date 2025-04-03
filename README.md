@@ -4,10 +4,10 @@ MCP CheatEngine Toolkit is a Python-based toolset for communicating with CheatEn
 
 ## Features
 
-- **CheatEngine Connection Management**: Automatically connect to CheatEngine instances and maintain connection status
-- **Memory Operations**: Provide memory reading and writing functions
-- **Assembly Code Analysis**: Support getting and analyzing assembly code corresponding to memory addresses
-- **Plugin Architecture**: Support dynamic loading of tool modules for easy extension of functionality
+* **CheatEngine Connection Management**: Automatically connect to CheatEngine instances and maintain connection status
+* **Memory Operations**: Provide memory reading and writing functions
+* **Assembly Code Analysis**: Support getting and analyzing assembly code corresponding to memory addresses
+* **Plugin Architecture**: Support dynamic loading of tool modules for easy extension of functionality
 
 ## Getting Started
 
@@ -70,4 +70,4 @@ test_echo({"name": "Test", "value": 100})
 
 ## Documentation
 
-For Chinese documentation, please see [Readme_zh.md](./docs/Readme_zh.md)
+For Chinese documentation, please see Readme_zh.md
