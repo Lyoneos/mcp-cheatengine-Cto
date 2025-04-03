@@ -130,4 +130,4 @@ memory_read("0x7065F60", "int32", {
 
 ## API参考
 
-更多详细的API文档，请参阅API.md文件。
+更多详细的API文档，请参阅[API参考文档](Api_zh.md)。
