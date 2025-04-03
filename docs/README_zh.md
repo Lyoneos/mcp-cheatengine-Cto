@@ -2,7 +2,6 @@
 
 MCP CheatEngine工具集是一个基于Python的工具包，用于通过MCP接口与CheatEngine进行通信，提供内存读写、汇编代码分析等功能。
 
-这里是开发了CE插件和MCP接口
 
 Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，写的模块，lua里也实现了了写和指针，不过稳定性一般。
 
