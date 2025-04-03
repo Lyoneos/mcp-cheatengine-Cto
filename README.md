@@ -1,18 +1,29 @@
-# MCP CheatEngine Toolset
+# MCP CheatEngine Toolkit
 
-MCP CheatEngine toolset is a Python-based toolkit for communicating with CheatEngine through the MCP interface, providing memory read and write, assembly code analysis, and other functions.
+[![English](https://img.shields.io/badge/English-Click-yellow)](README.md)
+[![简体中文](https://img.shields.io/badge/中文文档-点击查看-orange)](README-zh.md)
 
-Python and CE use the socket protocol for communication. Currently, Python MCP only has built-in read and write modules, and Lua has also implemented writing and pointers, but stability is general.
+MCP CheatEngine `unofficial` is a Python-based toolkit that communicates with CheatEngine through the MCP interface, providing features such as reading memory and assembly code analysis.
 
-Those interested can give it a star.
+Python and CE use the socket protocol for communication. Currently, the Python MCP only has a built-in read module, and the write module has not been implemented in the MCP client. Lua has also implemented writing and pointer scanning, but it's unstable.
+
+If you're interested, please give it a star.
+
+
+# CE Plugin Link
+
+
+* [CE Plugin Download](https://github.com/Lyoneos/mcp-cheatengine-Cto_CEPlugins)
 
 ## Features
 
 * Automatically connect to CheatEngine and analyze application memory and assembly
-* Provide AI interactive memory reading function
-* Support obtaining and analyzing assembly code corresponding to memory addresses
+* Provide AI interactive memory reading functionality
+* Support getting and analyzing assembly code corresponding to memory addresses
 
 ## Getting Started
+
+* It is recommended to use the cursor in conjunction with this project to complete the usage
 
 ### Install Dependencies
 
@@ -28,7 +39,7 @@ python main.py
 
 ## Tool Usage Instructions
 
-#### Detailed documentation can be found in the API documentation
+#### For detailed information, please refer to the API documentation
 
 ### 1. Connection Tool (ce_connect)
 
@@ -52,17 +63,12 @@ memory_read("0x7065F60", "int32", {
 })
 ```
 
-### 3. Test Tool (test_echo)
+### 3. Testing Tool (test_echo)
 
-A test tool that receives input of any type and outputs it unchanged.
+A testing tool that receives input of any type and outputs it unchanged.
 
 ```python
 # Example
-test_echo("Test string")
+test_echo("Test String")
 test_echo({"name": "Test", "value": 100})
 ```
-
-## Documentation
-
-For Chinese documentation, please see [docs/README_zh.md](docs/README_zh.md).
-For API reference, please see [docs/Api_zh.md](docs/Api_zh.md).
