@@ -2,8 +2,6 @@
 
 MCP CheatEngine toolset is a Python-based toolkit for communicating with CheatEngine through the MCP interface, providing memory read and write, assembly code analysis, and other functions.
 
-Here, CE plugins and MCP interfaces have been developed.
-
 Python and CE use the socket protocol for communication. Currently, Python MCP only has built-in read and write modules, and Lua has also implemented writing and pointers, but stability is general.
 
 Those interested can give it a star.
