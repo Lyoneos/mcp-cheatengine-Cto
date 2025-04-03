@@ -1,86 +1,54 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
-CheatEngine Connection Tool Module
+CheatEngine连接测试工具
+
+用于测试CheatEngine连接是否正常工作
 """
+from util import logger, create_ce_client, cheatEngine_config
 
-import logging
-import socket
-import time
 
-logger = logging.getLogger(__name__)
-
-# CheatEngine default connection settings
-DEFAULT_HOST = "127.0.0.1"
-DEFAULT_PORT = 52736
-CONNECTION_TIMEOUT = 5  # seconds
-
-def ce_connect(mcp_instance):
-    """Connect to CheatEngine and check connection status
-    
-    Args:
-        mcp_instance: MCP CheatEngine instance
-        
-    Returns:
-        dict: Dictionary containing connection status information
+TOOL_DESCRIPTION = """
+    连接到CheatEngine并检查连接状态
     """
-    if mcp_instance.connected:
-        logger.info("Already connected to CheatEngine")
-        return {
-            "success": True,
-            "message": "Already connected to CheatEngine",
-            "status": "connected"
-        }
+
+
+def ce_connect() -> str:
+    """
+    连接到CheatEngine服务器并返回连接状态
     
-    logger.info("Attempting to connect to CheatEngine...")
+    Returns:
+        str: 连接状态信息
+    """
     try:
-        # Implement actual connection logic here
-        # Example: Create a connection to CheatEngine
-        # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # sock.settimeout(CONNECTION_TIMEOUT)
-        # sock.connect((DEFAULT_HOST, DEFAULT_PORT))
+        # 创建CE客户端
+        client = create_ce_client(
+            host=cheatEngine_config["host"], 
+            port=cheatEngine_config["port"],
+            auto_connect=True
+        )
         
-        # Simulate successful connection
-        time.sleep(1)  # Simulate connection delay
-        mcp_instance.connected = True
-        
-        logger.info("Successfully connected to CheatEngine")
-        return {
-            "success": True,
-            "message": "Successfully connected to CheatEngine",
-            "status": "connected"
-        }
-    except socket.timeout:
-        logger.error("Connection to CheatEngine timed out")
-        return {
-            "success": False,
-            "message": "Connection to CheatEngine timed out",
-            "status": "timeout"
-        }
-    except ConnectionRefusedError:
-        logger.error("CheatEngine refused connection, ensure CheatEngine is running")
-        return {
-            "success": False,
-            "message": "CheatEngine refused connection, ensure CheatEngine is running",
-            "status": "refused"
-        }
+        # 检查服务器状态
+        if client.connected:
+            # 进一步测试连接是否响应
+            if client.check_server(timeout=3):
+                return f"已成功连接到CheatEngine服务器 {client.host}:{client.port}，连接正常"
+            else:
+                return f"已连接到CheatEngine服务器 {client.host}:{client.port}，但服务器无响应"
+        else:
+            return f"无法连接到CheatEngine服务器 {cheatEngine_config['host']}:{cheatEngine_config['port']}"
     except Exception as e:
-        logger.error(f"Error connecting to CheatEngine: {str(e)}")
-        return {
-            "success": False,
-            "message": f"Error connecting to CheatEngine: {str(e)}",
-            "status": "error"
-        }
+        logger.error(f"连接CheatEngine服务器时发生错误: {str(e)}")
+        return f"连接CheatEngine服务器时发生错误: {str(e)}"
+    finally:
+        # 确保断开连接
+        if 'client' in locals() and client.connected:
+            client.disconnect()
+
 
 def register_tool(mcp):
-    """Register tool with MCP instance
+    """
+    向MCP注册工具
     
     Args:
-        mcp: MCP CheatEngine instance
+        mcp: MCP实例
     """
-    mcp.register_tool(
-        "ce_connect", 
-        lambda: ce_connect(mcp), 
-        "Connect to CheatEngine and check connection status"
-    )
+    mcp.tool(description=TOOL_DESCRIPTION)(ce_connect) 
