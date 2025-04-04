@@ -81,4 +81,4 @@ test_echo({"name": "测试", "value": 100})
 
 *    ✉️ [ieeLyon@163.com](mailto:ieeLyon@163.com)
 *    注明来意
-*    本人还有 Ai 渗透方案，感兴趣联系我的邮箱
+*    本人还有 *渗透* 和 *前端加密解密* AiMCP方案，感兴趣联系我的邮箱
