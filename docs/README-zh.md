@@ -4,7 +4,7 @@
 [![简体中文](https://img.shields.io/badge/中文文档-点击查看-orange)](docs/README-zh.md)
 
 
-MCP CheatEngine `非官方`是一个基于Python的工具包，通过MCP接口与CheatEngine进行通信，提供读取内存、汇编代码分析等功能。
+MCP CheatEngine 是提供 CE 和 AI 交互的一个MCP工具，通过MCP接口与CheatEngine进行通信，提供读取内存、汇编代码分析等功能。`非官方`
 
 Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，写模块未在MCP客户端实现。lua里也实现了写和指针扫描，不稳定。
 
