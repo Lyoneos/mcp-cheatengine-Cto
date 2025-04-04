@@ -10,7 +10,7 @@ Python and CE use the socket protocol for communication. Currently, the Python M
 
 If you're interested, please give it a star.
 
-
+* The project is still in its early stages and there are issues and problems
 # CE Plugin Link
 
 
