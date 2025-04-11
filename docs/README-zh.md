@@ -34,7 +34,7 @@ Py和CE通讯用的是socket协议，目前Python MCP 只内置了读模块，�
 pip install -r requirements.txt
 ```
 
-### 运行服务
+### 运行 MCP 服务
 
 ```bash
 python main.py
