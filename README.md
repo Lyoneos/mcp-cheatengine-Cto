@@ -32,7 +32,7 @@ If you're interested, please give it a star.
 pip install -r requirements.txt
 ```
 
-### Run Service
+### Run MCPService
 
 ```bash
 python main.py
