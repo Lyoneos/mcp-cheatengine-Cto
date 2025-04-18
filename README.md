@@ -13,7 +13,8 @@ If you're interested, please give it a star.
 * The project is still in its early stages and there are issues and problems
 # CE Plugin Link
 
-
+* Must Download
+* Otherwise, MCP SERVER cannot function as expected
 * [CE Plugin Download](https://github.com/Lyoneos/mcp-cheatengine-Cto_CEPlugins)
 
 ## Features
