@@ -1,6 +1,6 @@
 # MCP CheatEngine Cto
 
-[![English](https://img.shields.io/badge/English-Click-yellow)](docs/README.md)
+[![English](https://img.shields.io/badge/English-Click-yellow)](README.md)
 [![简体中文](https://img.shields.io/badge/中文文档-点击查看-orange)](docs/README-zh.md)
 
 
