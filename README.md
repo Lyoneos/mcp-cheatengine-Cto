@@ -77,5 +77,7 @@ test_echo({"name": "Test", "value": 100})
 ```
 
 # UpDate
-* I recently discovered that Python is able to read memory directly, and this project may be deprecated and discontinued at any time due to the complexity of the code. Subsequent code will probably be done directly by Python.
+
+## 2025.05.05
+*I recently discovered that Python is able to read memory directly, and this project may be deprecated and discontinued at any time due to the complexity of the code. Future code will probably just leave reading the memory to Python alone.This is because I didn't think about whether Python had a module that could do it at the beginning of the code design process.
 
