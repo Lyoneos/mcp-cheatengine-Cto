@@ -23,6 +23,7 @@ If you're interested, please give it a star.
 * Provide AI interactive memory reading functionality
 * Support getting and analyzing assembly code corresponding to memory addresses
 
+
 ## Getting Started
 
 * It is recommended to use the cursor in conjunction with this project to complete the usage
@@ -74,3 +75,7 @@ A testing tool that receives input of any type and outputs it unchanged.
 test_echo("Test String")
 test_echo({"name": "Test", "value": 100})
 ```
+
+# UpDate
+* I recently discovered that Python is able to read memory directly, and this project may be deprecated and discontinued at any time due to the complexity of the code. Subsequent code will probably be done directly by Python.
+
